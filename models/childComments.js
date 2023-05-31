@@ -3,10 +3,10 @@ const { Schema } = mongoose;
 
 const childComments = new Schema(
   {
-    childComments: {
-      type: [String],
+    childComments:[{
+      type: String,
       require: true,
-    },
+    }],
     parentComments: {
       type: mongoose.Schema.Types.ObjectId,
       ref: 'parentComments'

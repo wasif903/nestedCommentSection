@@ -3,10 +3,10 @@ const { Schema } = mongoose;
 
 const nestedReplies = new Schema(
   {
-    nestedReplies: {
-      type: [String],
+    nestedReplies: [{
+      type: String,
       require: true,
-    },
+    }],
     parentComments: {
       type: mongoose.Schema.Types.ObjectId,
       ref: 'parentComments'
