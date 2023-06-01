@@ -4,7 +4,7 @@ import dotenv from 'dotenv';
 import auth from "./routes/auth.js";
 import cookieParser from 'cookie-parser';
 import cors from 'cors';
-import comments from "./models/parentComments.js";
+import comments from "./routes/comment.js";
 
 const app = express();
 app.use(express.json());
