@@ -1,7 +1,6 @@
 import express  from "express";
 import mongoDBConnection from "./db.js";
 import dotenv from 'dotenv';
-import auth from "./routes/auth.js";
 import cookieParser from 'cookie-parser';
 import cors from 'cors';
 import comments from "./routes/comment.js";
@@ -15,7 +14,6 @@ app.use(cookieParser());
 dotenv.config();
 mongoDBConnection();
 
-app.use('/auth', auth);
 app.use('/posting', comments);
 
 app.get('/check', (req, res) => {

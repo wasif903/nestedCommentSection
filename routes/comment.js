@@ -3,6 +3,15 @@ import commentSchema from "../models/commentSchema.js";
 
 const router = express.Router();
 
+router.get('/get-comments', async (req, res) => {
+
+    try {
+        const findComments = await commentSchema.find();
+        res.status(200).json(findComments);
+    } catch (error) {
+        res.status(500).json(error);
+    }
+})
 
 router.post('/post-comment', async (req, res) => {
     try {
